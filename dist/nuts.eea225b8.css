@@ -1116,7 +1116,7 @@ body {
   line-height: 1.5;
   color: #395084;
   text-align: left;
-  letter-spacing: 2; }
+  letter-spacing: 1.5; }
 
 button,
 a {
@@ -1186,7 +1186,7 @@ a {
   font-size: 2rem;
   font-family: 'Museo Sans Cyrl 500';
   display: inline-block;
-  line-height: 49px;
+  line-height: 60px;
   height: 60px;
   padding-left: 45px; }
 
@@ -1237,28 +1237,31 @@ a {
       justify-content: flex-end;
       align-items: center; } }
 
-.btn-buy-walnuts {
+.btn-buy-transparent {
   margin: 0;
   padding: 0;
   text-indent: 0;
   list-style: none;
   text-decoration: none;
   font-family: 'Museo Sans Cyrl 300';
-  border: 1px solid white;
+  border: 2px solid white;
   color: white;
   text-align: center;
   background: none;
-  border-radius: 20px;
-  padding: 9px 40px;
+  border-radius: 50px;
+  padding: 10px 50px;
   transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out; }
-  .btn-buy-walnuts:hover {
+  .btn-buy-transparent:hover {
     box-shadow: 0 0 40px 40px white inset;
     color: #abcdff; }
 
 .hide-show__button {
   background: transparent;
   border: none;
-  margin-top: 15px; }
+  margin-top: 5px;
+  position: fixed;
+  right: 20px;
+  z-index: 5; }
   @media (min-width: 768px) {
     .hide-show__button {
       display: none; } }
@@ -1266,7 +1269,7 @@ a {
 .hide-show__item {
   width: 50px;
   height: 6px;
-  background-color: white;
+  background-color: #395084;
   margin: 10px 0;
   display: block; }
   @media (min-width: 768px) {
@@ -1379,7 +1382,8 @@ a {
   align-items: center;
   text-align: center;
   margin-top: 32px;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .mouse-pic:hover .arrow1,
   .mouse-pic:hover .arrow2 {
     opacity: 1; }
@@ -1453,7 +1457,10 @@ a {
       flex: 0 0 12.5%;
       max-width: 12.5%; } }
   .vitamins__header {
-    font-size: 2rem; }
+    font-size: 1.5rem; }
+    @media (min-width: 1200px) {
+      .vitamins__header {
+        font-size: 2rem; } }
   .vitamins__list {
     margin: 0;
     padding: 0;
@@ -1554,17 +1561,33 @@ a {
     font-size: 1rem; }
 
 .section-benefits {
-  background: url("backBenefits.9e24805a.png") center center no-repeat; }
+  background: #eff1f5; }
+  @media (min-width: 768px) {
+    .section-benefits {
+      background: url("backBenefits.9e24805a.png") center center no-repeat #eff1f5;
+      background-size: 100% auto; } }
 
 .benefits-header {
   color: #e3e4eb;
   margin: 0;
   padding: 2rem 0;
   text-transform: uppercase;
-  font-size: 6.67rem;
-  font-weight: 100; }
+  font-size: 4rem;
+  font-weight: 100;
+  text-align: center; }
   .benefits-header strong {
     font-family: 'Museo Sans Cyrl 700'; }
+  @media (min-width: 992px) {
+    .benefits-header {
+      color: #e3e4eb;
+      margin: 0;
+      padding: 2rem 0;
+      text-transform: uppercase;
+      font-size: 6.67rem;
+      font-weight: 100;
+      text-align: left; }
+      .benefits-header strong {
+        font-family: 'Museo Sans Cyrl 700'; } }
 
 .benefits {
   display: flex;
@@ -1606,19 +1629,32 @@ a {
     .benefit:nth-child(even) {
       padding-top: 300px; } }
 
-.section-lovers {
-  background: url("backContact_1.47c14074.png") top center no-repeat;
-  background-size: 100% auto; }
+@media (min-width: 768px) {
+  .section-lovers {
+    background: url("backContact.ffe21557.png") top center no-repeat;
+    background-size: 100% auto; } }
 
 .lovers-header {
   color: #f9ebd1;
   margin: 0;
   padding: 2rem 0;
   text-transform: uppercase;
-  font-size: 6.67rem;
-  font-weight: 100; }
+  font-size: 4rem;
+  font-weight: 100;
+  text-align: center; }
   .lovers-header strong {
     font-family: 'Museo Sans Cyrl 700'; }
+  @media (min-width: 992px) {
+    .lovers-header {
+      color: #f9ebd1;
+      margin: 0;
+      padding: 2rem 0;
+      text-transform: uppercase;
+      font-size: 6.67rem;
+      font-weight: 100;
+      text-align: left; }
+      .lovers-header strong {
+        font-family: 'Museo Sans Cyrl 700'; } }
 
 .slider-wrap {
   margin: auto;
@@ -1647,21 +1683,21 @@ a {
   bottom: 0;
   z-index: -1; }
 
-.glide:after {
-  content: "";
-  width: 217px;
-  height: 225px;
-  right: 19%;
-  bottom: 5%;
-  position: absolute;
-  background: url("nutBottomLovers.0de82299.png") top center no-repeat;
-  z-index: -1; }
+@media (min-width: 768px) {
+  .glide:after {
+    content: "";
+    width: 217px;
+    height: 225px;
+    right: 19%;
+    bottom: 5%;
+    position: absolute;
+    background: url("nutBottomLovers.0de82299.png") top center no-repeat;
+    z-index: -1; } }
 
 .glide__slide {
   padding: 0 50px;
   text-align: center;
-  height: 600px;
-  overflow: scroll; }
+  height: 600px; }
   @media (min-width: 992px) {
     .glide__slide {
       padding: 0 100px;
@@ -1691,30 +1727,58 @@ a {
 
 .slide-descr {
   font-weight: 100;
-  line-height: 40px; }
+  line-height: 20px;
+  font-size: 0.88rem; }
+  @media (min-width: 992px) {
+    .slide-descr {
+      line-height: 40px;
+      font-size: 1rem; } }
 
 .section-buy {
-  padding-bottom: 40px;
-  background: url("rectangle.54db5ae7.jpg") top center no-repeat;
-  background-size: auto 100%; }
+  background-color: #eff1f5; }
+  @media (min-width: 992px) {
+    .section-buy {
+      padding-bottom: 30px;
+      background: url("rectangle.9211dbcd.png") top center no-repeat;
+      background-size: 100% 100%; } }
 
 .buy-header {
   color: #c8d2e1;
   margin: 0;
   padding: 2rem 0;
   text-transform: uppercase;
-  font-size: 6.67rem;
+  font-size: 4rem;
   font-weight: 100;
-  padding: 25rem 0 2rem 0; }
+  text-align: center; }
   .buy-header strong {
     font-family: 'Museo Sans Cyrl 700'; }
+  @media (min-width: 992px) {
+    .buy-header {
+      color: #c8d2e1;
+      margin: 0;
+      padding: 2rem 0;
+      text-transform: uppercase;
+      font-size: 6.67rem;
+      font-weight: 100;
+      text-align: left;
+      padding: 25rem 0 2rem 0; }
+      .buy-header strong {
+        font-family: 'Museo Sans Cyrl 700'; } }
 
 .buy-plans-row {
   display: flex;
   flex-wrap: wrap;
   margin-right: -10px;
   margin-left: -10px;
-  justify-content: center; }
+  margin: 0;
+  justify-content: center;
+  padding-bottom: 40px; }
+  @media (min-width: 576px) {
+    .buy-plans-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -10px;
+      margin-left: -10px; } }
 
 @media (min-width: 768px) {
   .buy-plans-col {
@@ -1730,7 +1794,14 @@ a {
   display: flex;
   flex-wrap: wrap;
   margin-right: -10px;
-  margin-left: -10px; }
+  margin-left: -10px;
+  margin: 0; }
+  @media (min-width: 768px) {
+    .buy-plans {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -10px;
+      margin-left: -10px; } }
 
 .buy-plans-header {
   position: relative;
@@ -1763,7 +1834,8 @@ a {
   min-height: 1px;
   padding-right: 10px;
   padding-left: 10px;
-  text-align: center; }
+  text-align: center;
+  margin: 0; }
   .buy-plan:last-child {
     border-right: none; }
     .buy-plan:last-child .buy-plan__header:after {
@@ -1779,7 +1851,7 @@ a {
       flex: 0 0 33.33333%;
       max-width: 33.33333%; } }
   .buy-plan__header {
-    font-size: 1.56rem;
+    font-size: 1.5rem;
     font-family: 'Museo Sans Cyrl 500';
     font-weight: normal;
     padding: 20px 0;
@@ -1805,14 +1877,16 @@ a {
       font-family: 'Museo Sans Cyrl 500';
       font-weight: normal; }
   .buy-plan__descr {
-    font-size: 0.78rem;
-    text-align: left;
-    min-height: 250px;
-    line-height: 20px; }
+    font-family: 'Museo Sans Cyrl 100';
+    font-size: 0.77rem;
+    text-align: center;
+    min-height: 200px;
+    line-height: 20px;
+    padding-left: 10px; }
     @media (min-width: 768px) {
       .buy-plan__descr {
-        font-size: 1rem;
-        text-align: center; } }
+        text-align: left;
+        min-height: 250px; } }
   .buy-plan__btn {
     border: none;
     color: #395084;
@@ -1828,7 +1902,7 @@ a {
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 30px;
+  left: 20px;
   z-index: 5;
   border: none;
   background-color: #395084;
