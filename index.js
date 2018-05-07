@@ -10,6 +10,7 @@ new Glide('.js-glide').mount()
 AOS.init()
 
 $(document).ready(function () {
+  
   // Smooth scroll
   $('.js-smooth-scroll').click(function () {
     $('html, body').animate({
