@@ -242,7 +242,7 @@ a {
   margin-top: 5px;
   position: fixed;
   right: 20px;
-  z-index: 5;
+  z-index: 8;
 
   @include media-breakpoint-up(md) {
     display: none;
@@ -252,9 +252,27 @@ a {
 .hide-show__item {
   width: 50px;
   height: 6px;
-  background-color: $blue;;
+  background-color: $blue;
   margin: 10px 0;
   display: block;
+  transition: all ease-in-out 0.4s;
+
+  &.close:nth-child(3) {
+    opacity: 0;
+    width: 0;
+  }
+
+  &.close:nth-child(1) {
+    transform: rotate(-45deg);
+    background-color: $red;
+    z-index: 15;
+  } 
+
+  &.close:nth-child(2) {
+    transform: rotate(45deg);
+    background-color: $red;
+    z-index: 15;
+  } 
 
   @include media-breakpoint-up(md) {
     display: none;
@@ -299,7 +317,7 @@ a {
   text-decoration: none;
   text-align: center;
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
   padding: 50px 0;
 
   &:hover {
@@ -327,7 +345,7 @@ a {
   color: white;
   border-radius: 30px;
   padding: 16px 60px;
-  margin-top: 40px;
+  margin-top: 1px;
   font-size: 1.55rem;
   font-family: 'Museo Sans Cyrl 500';
 }
@@ -348,7 +366,7 @@ a {
 
 .nuts-desc {
   @include col(6);
-  padding-top: 200px;
+  padding-top: 250px;
   padding-bottom: 200px;
   font-family: 'Museo Sans Cyrl 100';
   text-align: center;
@@ -502,7 +520,8 @@ a {
 .section-benefits {
   background: $light-blue;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
+  height: 100%;
   background: url("../images/backBenefits.png") center center no-repeat $light-blue;
   background-size: 100% auto;
 }
@@ -583,6 +602,7 @@ a {
 .glide {
 
   &:before {
+    @include media-breakpoint-up(md) {
     content: "";
     max-width: 600px;
     height: 600px;
@@ -595,6 +615,7 @@ a {
     top: 0;
     bottom: 0;
     z-index: -1;
+    }
   }
 
   &:after {

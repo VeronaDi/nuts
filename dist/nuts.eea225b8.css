@@ -1261,7 +1261,7 @@ a {
   margin-top: 5px;
   position: fixed;
   right: 20px;
-  z-index: 5; }
+  z-index: 8; }
   @media (min-width: 768px) {
     .hide-show__button {
       display: none; } }
@@ -1271,7 +1271,19 @@ a {
   height: 6px;
   background-color: #395084;
   margin: 10px 0;
-  display: block; }
+  display: block;
+  transition: all ease-in-out 0.4s; }
+  .hide-show__item.close:nth-child(3) {
+    opacity: 0;
+    width: 0; }
+  .hide-show__item.close:nth-child(1) {
+    transform: rotate(-45deg);
+    background-color: #ff9676;
+    z-index: 15; }
+  .hide-show__item.close:nth-child(2) {
+    transform: rotate(45deg);
+    background-color: #ff9676;
+    z-index: 15; }
   @media (min-width: 768px) {
     .hide-show__item {
       display: none; } }
@@ -1314,7 +1326,7 @@ a {
   text-decoration: none;
   text-align: center;
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
   padding: 50px 0; }
   .mobile-nav__link:hover {
     color: #ff9676; }
@@ -1337,7 +1349,7 @@ a {
   color: white;
   border-radius: 30px;
   padding: 16px 60px;
-  margin-top: 40px;
+  margin-top: 1px;
   font-size: 1.55rem;
   font-family: 'Museo Sans Cyrl 500'; }
 
@@ -1370,7 +1382,7 @@ a {
   padding-left: 10px;
   flex: 0 0 75%;
   max-width: 75%;
-  padding-top: 200px;
+  padding-top: 250px;
   padding-bottom: 200px;
   font-family: 'Museo Sans Cyrl 100';
   text-align: center; }
@@ -1562,8 +1574,9 @@ a {
 
 .section-benefits {
   background: #eff1f5; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .section-benefits {
+      height: 100%;
       background: url("backBenefits.9e24805a.png") center center no-repeat #eff1f5;
       background-size: 100% auto; } }
 
@@ -1669,19 +1682,20 @@ a {
       flex: 0 0 75%;
       max-width: 75%; } }
 
-.glide:before {
-  content: "";
-  max-width: 600px;
-  height: 600px;
-  background: #eff1f5;
-  border-radius: 50%;
-  margin: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1; }
+@media (min-width: 768px) {
+  .glide:before {
+    content: "";
+    max-width: 600px;
+    height: 600px;
+    background: #eff1f5;
+    border-radius: 50%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1; } }
 
 @media (min-width: 768px) {
   .glide:after {
