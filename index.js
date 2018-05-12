@@ -10,7 +10,6 @@ new Glide('.js-glide').mount()
 AOS.init()
 
 $(document).ready(function () {
-  
   // Smooth scroll
   $('.js-smooth-scroll').click(function () {
     $('html, body').animate({
@@ -40,4 +39,8 @@ $(document).on('scroll', function (ev) {
 // Mobile Navi HideShow Button //
 $('.js-show-mob-menu').on('click', function (event) {
   $('.mobile-nav__list').toggleClass('show')
+})
+
+$('.js-show-mob-menu').on('click', function (event) {
+  $('.hide-show__item').toggleClass('close')
 })
