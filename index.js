@@ -42,5 +42,9 @@ $('.js-show-mob-menu').on('click', function (event) {
 })
 
 $('.js-show-mob-menu').on('click', function (event) {
+  $('.mobile-nav__link').removeClass('show')
+})
+
+$('.js-show-mob-menu').on('click', function (event) {
   $('.hide-show__item').toggleClass('close')
 })
