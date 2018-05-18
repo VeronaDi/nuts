@@ -1105,9 +1105,6 @@ html {
   transform: perspective(2500px) rotateX(0); }
 
 /*# sourceMappingURL=aos.css.map*/
-* {
-  hyphens: auto; }
-
 body {
   margin: 0;
   font-family: 'Museo Sans Cyrl 100';
@@ -1279,11 +1276,15 @@ a {
   .hide-show__item.close:nth-child(1) {
     transform: rotate(-45deg);
     background-color: #ff9676;
-    z-index: 15; }
+    z-index: 8;
+    margin: 0;
+    height: 3px; }
   .hide-show__item.close:nth-child(2) {
     transform: rotate(45deg);
     background-color: #ff9676;
-    z-index: 15; }
+    z-index: 8;
+    margin: 0;
+    height: 3px; }
   @media (min-width: 768px) {
     .hide-show__item {
       display: none; } }
@@ -1298,6 +1299,8 @@ a {
   top: 0;
   left: 0;
   display: inline-block;
+  text-align: center;
+  background: #395084;
   width: 100%;
   height: 100%;
   transition: all 0.5s;
@@ -1311,8 +1314,7 @@ a {
       display: none; } }
 
 .mobile-nav__item {
-  font-family: 'Museo Sans Cyrl 300';
-  background: #395084; }
+  font-family: 'Museo Sans Cyrl 300'; }
   @media (min-width: 768px) {
     .mobile-nav__item {
       display: none; } }
