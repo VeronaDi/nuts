@@ -27,10 +27,6 @@ $blue: rgb(57, 80, 132);
 $gray: rgb(227, 228, 235);
 $light-blue: #eff1f5;
 
-* {
-  hyphens: auto;
-}
-
 body {
   margin: 0;
   font-family: 'Museo Sans Cyrl 100';
@@ -265,13 +261,17 @@ a {
   &.close:nth-child(1) {
     transform: rotate(-45deg);
     background-color: $red;
-    z-index: 15;
+    z-index: 8;
+    margin: 0;
+    height: 3px;
   } 
 
   &.close:nth-child(2) {
     transform: rotate(45deg);
     background-color: $red;
-    z-index: 15;
+    z-index: 8;
+    margin: 0;
+    height: 3px;
   } 
 
   @include media-breakpoint-up(md) {
@@ -286,6 +286,8 @@ a {
   top: 0;
   left: 0;
   display: inline-block;
+  text-align: center;
+  background: $blue;
   width: 100%;
   height: 100%;
   transition: all 0.5s;
@@ -304,7 +306,6 @@ a {
 
 .mobile-nav__item {
   font-family: 'Museo Sans Cyrl 300';
-  background: rgb(57, 80, 132);
 
   @include media-breakpoint-up(md) {
     display: none;
