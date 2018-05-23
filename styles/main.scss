@@ -27,15 +27,17 @@ $blue: rgb(57, 80, 132);
 $gray: rgb(227, 228, 235);
 $light-blue: #eff1f5;
 
+html {
+  font-size: 18px;
+}
+
 body {
   margin: 0;
   font-family: 'Museo Sans Cyrl 100';
-  font-size: 18px;
   font-weight: normal;
   line-height: 1.5;
   color: $blue;
   text-align: left;
-  letter-spacing: 1.5;
 }
 
 button,
@@ -336,19 +338,27 @@ a {
   font-size: 3.33rem;
   color: white;
   text-align: center;
+  margin-top: 150px;
+
+  @include media-breakpoint-up(lg) {
   margin-top: 50px;
+  }
 }
 
 .btn-watch-video {
+  margin-top: 140px;
   display: inline-block;
   border: none;
   background: $red;
   color: white;
   border-radius: 30px;
   padding: 16px 60px;
-  margin-top: 1px;
-  font-size: 1.55rem;
+  font-size: 1.56rem;
   font-family: 'Museo Sans Cyrl 500';
+
+  @include media-breakpoint-up(lg) {
+  margin-top: 1px;
+  }
 }
 
 .walnut-set-center {
@@ -367,9 +377,10 @@ a {
 
 .nuts-desc {
   @include col(6);
-  padding-top: 250px;
+  padding-top: 20px;
   padding-bottom: 200px;
   font-family: 'Museo Sans Cyrl 100';
+  font-size: 1.33rem;
   text-align: center;
 }
 
@@ -440,7 +451,7 @@ a {
   text-align: center;
   font-weight: 300;
   margin: 0;
-  padding: 100px 0 0 0;
+  padding: 80px 0 0 0;
 }
 
 .minerals-wrap {
@@ -484,13 +495,13 @@ a {
 
   font-family:'Museo Sans Cyrl 500';
   text-align: center;
-  padding: 100px 0;
+  padding: 120px 0;
 
   &__circle {
-    @include on-circle( $item-count: 6, $circle-size: 300px, $item-size: 100px, $rot: 30);
+    @include on-circle( $item-count: 6, $circle-size: 300px, $item-size: 100px, $rot: -30);
 
     @include media-breakpoint-up(lg) {
-      @include on-circle( $item-count: 6, $circle-size: 650px, $item-size: 160px, $rot: 30);
+      @include on-circle( $item-count: 6, $circle-size: 650px, $item-size: 160px, $rot: -30);
     }
 
     background: url("../images/walnutBenefit.png") center center no-repeat rgba(222,231,244,0.9);
@@ -520,12 +531,10 @@ a {
 // Section benefits
 .section-benefits {
   background: $light-blue;
-
-  @include media-breakpoint-up(lg) {
-  height: 100%;
   background: url("../images/backBenefits.png") center center no-repeat $light-blue;
   background-size: 100% auto;
-}
+  height: auto;
+  
 }
 
 .benefits-header {
@@ -809,13 +818,12 @@ a {
     font-family: 'Museo Sans Cyrl 100';
     font-size: 0.77rem;
     text-align: center;
-    min-height: 200px;
-    line-height: 20px;
+    min-height: 180px;
     padding-left: 10px;
+    line-height: 2;
 
     @include media-breakpoint-up(md) {
       text-align: left;
-      min-height: 250px;
     }
   }
 
